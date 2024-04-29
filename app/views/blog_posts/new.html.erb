@@ -1,20 +1,2 @@
 <h1>New Blog Post</h1>
-
-<%= form_with model: @blog_post do |f| %>
-  <% if f.object.errors.any? %>
-    <div>
-      <% f.object.errors.full_messages.each do |m| %>
-        <div><%= m %></div>
-      <% end %>
-    </div>
-  <% end %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
-  <%= f.button %>  
-<% end %>
+<%= render: partial "form", locals: {blog_post: @blog_post} %>

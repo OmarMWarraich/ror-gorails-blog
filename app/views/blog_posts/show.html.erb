@@ -1,3 +1,5 @@
 <h1><%= @blog_post.title %></h1>
 <h2><%= @blog_post.body %></h2>
-<%= link_to 'Back to Posts', root_path %>
+<h3>
+  <%= link_to 'Back to Posts', root_path %> | <%= link_to 'Edit this post', edit_blog_post_path(@blog_post.id) %>
+</h3>
