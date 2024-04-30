@@ -12,3 +12,7 @@
 <% end %>
 
 <%= link_to 'New Post', new_blog_post_path %>
+
+<div class="my-16">
+  <%== pagy_nav(@pagy) %>
+</div>
