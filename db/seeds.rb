@@ -9,5 +9,6 @@
 #   end
 
 100.times do |i|
-  BlogPost.create title: "Blog Post #{i}", content: "Hello World #{i}", published_at: Time.current
+  blog_post = BlogPost.where(title: "Blog Post #{i}").first_or_intialize
+  blog_post.update(content: "Hello World", published_at: Time.current)
 end
