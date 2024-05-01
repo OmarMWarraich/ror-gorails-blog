@@ -1,6 +1,7 @@
 <h1>My Blog</h1>
 <% @blog_posts.each do |post| %>
   <div>
+    <%= image_tag post.cover_image if post.cover_image.present?  %>
     <h2><%= link_to post.title, post %></h2>
     <% if post.draft? %>
       <div class="p-2 rounded bg-gray-100 text-gray-900">Draft</div>
